@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Product Catalog</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic styling for the upload section */
+        .upload-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        input[type="file"] {
+            margin: 20px 0;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-container">
+        <h1>Upload Product Catalog</h1>
+        <p>Select your product catalog to upload</p>
+        <form action="/upload_catalog" method="POST" enctype="multipart/form-data">
+            <input type="file" name="catalog" accept=".pdf,.docx,.xlsx">
+            <button type="submit">Upload Catalog</button>
+        </form>
+        <a href="index.html">Back to Home</a>
+    </div>
+</body>
+</html>
